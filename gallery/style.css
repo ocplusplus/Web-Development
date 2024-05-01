@@ -1,0 +1,184 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #282d63;
+    color: #ffffffcf;
+    padding: 20px 0;
+    text-align: center; /* Center-align the header text */
+    position: relative; 
+    width: 100%; /* Make the header take the full width of the viewport */
+    top: 0; /* Position the header at the top */
+    font-family: Arial, sans-serif; /* Change the font family */
+}
+
+/*Styling article headers*/
+h2
+    {
+    text-align:left;
+    color: #aca8a8;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    }
+h3
+    {
+    text-align:right;
+    color: #aca8a8;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    }
+h4
+    {
+    text-align: right;
+    color: blue;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    }
+
+/* Style the navigation */
+nav {
+    margin-top: 100px;
+    background-color: #646464;
+    color: blue;
+    border:0.3em solid blue;
+    border-radius: 20px;
+    font-size: 14px; 
+    padding: 10px; /* Add padding to the right side */
+    margin-right: 10px;
+    position:sticky;
+    float: right;
+    width: 220px;
+    text-align:center;
+    font-size: 12px; 
+    font-family: "Arial", sans-serif; /* Change the font family */
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    }
+
+nav li {
+    display: block; /* Display each navigation item as a block, one per line */
+    margin-right: 10px;
+    text-align: right; /*right-align the nav links*/
+    }
+
+nav a {
+    text-decoration: none;
+    color: #261a6e; 
+    font-family:Arial, sans-serif;
+    font-size: 14px;
+    }
+    a:visited
+    {
+        color:#1334a3;
+    }
+    a:link
+    {
+     color:#261a6e;   
+    }
+    a:hover
+    {
+        color: blue;
+        font-weight: bold;
+    }
+
+/* Style the presentation container */
+#presentation-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 100px; /* Add margin to the top to account for the fixed header */
+    border: 3px solid blue; /* Add a border around the presentation container */
+    box-sizing: border-box; /* Include padding and border within the width */
+    background-color: #646464;
+    border-radius: 20px;
+    margin-inline:auto;
+    height:fit-content;
+    color: #aca8a8;
+    box-shadow: -4px -4px 10px rgba(0, 0, 255, 0.5), 6px 6px 10px rgba(0, 0, 255, 0.5);/* border effect*/
+    }
+
+article {
+    margin-bottom: 20px;
+}
+/* Style the text within the presentation container elements */
+
+    .picralign
+    {
+        text-align:right;
+        margin-right: 20px;
+    }
+    .piclalign
+    {
+        text-align:left;
+        margin-left: 20px;
+    }
+    #angryface
+	    {
+		    max-width: 400px;
+            height: auto;
+            padding-right: 50px;
+	    }
+	#disgustface
+	    {
+		    max-width: 400px;
+            height: auto;
+            padding-left: 50px;
+	    }
+    #ohnoface
+	    {
+		    max-width: 400px;
+            height: auto;
+            padding-right: 50px;
+	    }
+    #theworstface
+	    {
+		    max-width: 400px;
+            height: auto;
+            padding-left: 50px;
+	    }
+    #nervousface
+        {
+            max-width: 400px;
+            height: auto;
+            padding-right: 50px;
+        }
+    #surprisedface
+	    {
+		    max-width: 400px;
+            height: auto;
+            padding-left: 50px;
+	    }
+    #welpface
+        {
+            max-width: 400px;
+            height: auto;
+            padding-right: 50px;
+        }
+        p
+        {
+            text-align: center;
+            margin-left: 15px;
+
+        }
+/* Style the contact info */
+section#ContactInfo
+{
+    text-align: right;
+}
+/* Style the up-arrow link */
+.UpArrow {
+    display: block;
+    margin: auto;
+    height: 40px;
+}
+
