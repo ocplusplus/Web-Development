@@ -5,42 +5,44 @@
 -->
 
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Form</title>
-
     <link rel="stylesheet" type="text/css" href="style.css"> 
     
     <script> 
-
-        function verifyDigit(e)
-        {
+        function verifyDigit(e) {
             console.log(`${e.type}: key = ${e.key}, which = ${e.which}, charCode = ${e.charCode}, keyCode = ${e.keyCode}`);
      
-            if (e.key >= 0 && e.key <= 9) 
-            {
+            if (e.key >= 0 && e.key <= 9) {
                 return true;
             }
             return false;	
         }
           
-        </script>
-
+        document.addEventListener("DOMContentLoaded", function() {
+            const numberInputs = document.querySelectorAll(".number");
+            numberInputs.forEach(input => {
+                input.addEventListener("keypress", function(event) {
+                    if (!verifyDigit(event)) {
+                        event.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
 </head>
-
 <body>
-
     <main>
         <article class="container">
             <h4>&nbsp;</h4>
-			<h4>&nbsp;</h4>
-			<h4>&nbsp;</h4>
+            <h4>&nbsp;</h4>
+            <h4>&nbsp;</h4>
 
             <section><h4>&nbsp;</h4></section>
-		    <section><h3>PRODUCT</h3></section>
-			<section><h3>QUANTITY</h3></section>
+            <section><h3>PRODUCT</h3></section>
+            <section><h3>QUANTITY</h3></section>
 
             <section><h6>Drinks</h6></section>
             <section><h4>&nbsp;</h4><select class="selectors" size="1">
@@ -49,38 +51,31 @@
                 <option>Schrute's Hot Chocolate Tea</option>
                 <option>Schrute's Beet Protein Powder</option>
                 <option>Value Pack</option></select></section>
-            <section><h4>&nbsp;</h4><input class="number" minlength="1" maxlength="3"  value="0" type="text"></section>
+            <section><h4>&nbsp;</h4><input id="drinks_quantity" class="number" minlength="1" maxlength="3"  value="0" type="text"></section>
 
             <section><h6>Food</h6></section>
-			<section><h4>&nbsp;</h4><select class="selectors" size="1">
+            <section><h4>&nbsp;</h4><select class="selectors" size="1">
                 <option>&nbsp;</option>
                 <option>Beet Blueberry Muffins</option>
                 <option>Schrute's Scrumptious Scones</option>
                 <option>Dwight's Glazed Donuts</option>
                 <option>Value Pack</option></select></section>
-			<section><h4>&nbsp;</h4><input class="number" minlength="1" maxlength="3" value="0" type="text"></section>
+            <section><h4>&nbsp;</h4><input id="food_quantity" class="number" minlength="1" maxlength="3" value="0" type="text"></section>
 
-			<section><h6>Other Products</h6></section>
-			<section><h4>&nbsp;</h4><select class="selectors" size="1">
+            <section><h6>Other Products</h6></section>
+            <section><h4>&nbsp;</h4><select class="selectors" size="1">
                 <option>&nbsp;</option>
                 <option>DS Gym for Muscles Towel</option>
                 <option>DS Gym for Muscles Shaker</option>
                 <option>Caffeine Corner Thermos</option>
                 <option>Value Pack</option></select></section>
-			<section><h4>&nbsp;</h4><input class="number" minlength="1" maxlength="3" value="0" type="text"></section>
+            <section><h4>&nbsp;</h4><input id="other_quantity" class="number" minlength="1" maxlength="3" value="0" type="text"></section>
 
-			<section><h4>&nbsp;</h4></section>
-			<section><h4>&nbsp;</h4><button id="order" onclick="alert('Thank you for ordering from Dwight\'s Caffeine Corner!')"  
-                >Order Now</button></section>
-			<section><h4>&nbsp;</h4><button id="cancel" 
-                onclick="alert('Sorry that we could not earn your business today. Please come back soon!')"  
-                >Cancel</button></section>
+            <section><h4>&nbsp;</h4></section>
+            <section><h4>&nbsp;</h4><button id="order" onclick="alert('Thank you for ordering from Dwight\'s Caffeine Corner!')">Order Now</button></section>
+            <section><h4>&nbsp;</h4><button id="cancel" onclick="alert('Sorry that we could not earn your business today. Please come back soon!')">Cancel</button></section>
 
         </article>
     </main>
-
-    <script>
-		document.getElementById("number").onkeypress = () => {return verifyDigit(event);}
-	</script>
 </body>
 </html>
