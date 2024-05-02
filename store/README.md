@@ -1,1 +1,1 @@
-Designed and coded an HTML/CSS/JS based web application for an online store.
+Designed and coded a basic web application for an online store in HTML5, CSS, and Javascript.
