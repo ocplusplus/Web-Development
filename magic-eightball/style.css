@@ -1,0 +1,73 @@
+body {
+   background-color: #60C1E5; /* page background */
+
+  text-align: center; /* centre text */
+  font-family: 'Helvetica Neue', arial;
+  font-weight: 100;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3em;
+}
+
+p {
+  margin: 0;
+}
+
+/*eight ball shape */
+div.eight-ball, div.answer {
+  border: 1px solid transparent;
+}
+
+/* The outside circle! */
+div.eight-ball {
+  background-color: black;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+
+  /* "Center the 8 ball */
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* The inside circle! */
+div.answer {
+  background-color: grey;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+}
+
+/*text in eightball*/
+p#eight {
+  font-size: 5em;
+  margin: 20% auto;
+  color: white;
+}
+
+p#answer {
+  color: white;
+  padding: 20px;
+  letter-spacing: 2px;
+}
+/* button dimensions, shape, and font */
+button, input {
+
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-family: 'Helvetica Neue', arial;
+  font-weight: 100;
+  letter-spacing: 2px;
+  transition: .5s font-size;
+}
+
+button:hover { /* changing button size when hovered over */
+  font-size: 1.4em;
+}
